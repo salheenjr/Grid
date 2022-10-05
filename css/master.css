@@ -1,0 +1,107 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --mainColor: #FFF;
+    --mainColor2: #000;
+}
+
+.grid {
+    display: grid;
+    background-color: #DDD;
+    padding: 30px;
+    height: 235vh;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+/* __________________Div Into Grid_________________ */
+.grid div {
+    padding-left: 10px;
+    border-bottom: 2px solid #ff3d00;
+    position: relative;
+}
+/* ________________________First Row_________________________ */
+
+.osama {
+    background-color: var(--mainColor, #FFF);
+    grid-column: span 2;
+    position: relative;
+}
+
+
+.ahmed {
+    background-color: var(--mainColor, #FFF);
+}
+
+.shady {
+    background-color: var(--mainColor2, #000);
+    color: var(--mainColor);
+    grid-row: span 3;
+}
+/* ________________________Second Row____________________________ */
+
+.mohammed {
+    background-color: var(--mainColor);
+    grid-row: span 2;
+}
+
+.mahmoud {
+    background-color: var(--mainColor);
+    grid-column: span 2;
+}
+
+.ezz {
+    background-color: var(--mainColor);
+    grid-column: span 2;
+}
+/* ________________________Third Row____________________________ */
+
+.mosayed {
+    background-color: var(--mainColor);
+}
+
+.ibrahim {
+    background-color: var(--mainColor2);
+    color: var(--mainColor);
+}
+
+.gamal {
+    background-color: var(--mainColor);
+}
+
+.eman {
+    background-color: var(--mainColor);
+}
+/* _________________________Paragraph________________________ */
+.first {
+    font-weight: bold;
+}
+/* ________________________Before & After____________________ */
+.grid div::after {
+    content: "''";
+    color: gray;
+    opacity: 0.6;
+    font-size: 50px;
+    font-style: italic;
+    font-family: sans-serif;
+    position: absolute;
+    right: 10px;
+    bottom: -20px;
+}
+
+.grid div::before {
+    content: attr(data-jop);
+    color: gray;
+    opacity: 0.6;
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    top: 45px;
+}
+/* _____________________Span Div________________________ */
+.jop {
+    color: gray;
+    opacity: 0.6;
+}
